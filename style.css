@@ -1,0 +1,116 @@
+:root {
+    --primary-blue: #3b82f6;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --border-color: #e5e7eb;
+    --bg-light: #f9fafb;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 { margin: 0; font-size: 2.2rem; }
+.title { font-size: 1.2rem; color: var(--text-light); margin: 5px 0; }
+
+.contact-info, .social-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Section Styling */
+.section-title {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.experience-item, .project-item {
+    margin-bottom: 25px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.date { font-size: 0.85rem; color: var(--text-light); }
+.company { font-weight: bold; color: var(--primary-blue); margin: 2px 0; }
+.location { font-weight: normal; color: var(--text-light); margin-left: 10px; }
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--primary-blue);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+@media (max-width: 600px) {
+    .profile-header { flex-direction: column; text-align: center; }
+    .contact-info, .social-links { justify-content: center; flex-wrap: wrap; }
+    .item-header { flex-direction: column; }
+}
